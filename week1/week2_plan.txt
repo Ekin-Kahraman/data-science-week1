@@ -1,0 +1,55 @@
+WEEK 2 CLEANING PLAN
+====================
+Name: Ekin Kahraman
+Date: 2026-02-19
+
+I've completed all 5 tutorials and application checklists.
+
+Looking across all my checklists, these are the 2 most important issues 
+to address in Week 2:
+
+
+ISSUE 1 (Most Important)
+-------------------------
+Brief description: Site, treatment, and collector columns have inconsistent formatting and typos
+
+Which tutorial provides the solution: Tutorial 1 - Checking Strings
+
+Which variable(s) affected: site, treatment, collector
+
+Why this is important to fix: The inconsistencies mean groups are split incorrectly - e.g. "Site_A", "Site A", "site_a" are treated as three separate sites instead of one, which would break any grouped analysis
+
+What I plan to do: Use str_to_lower() to standardise capitalisation, str_replace() to fix formatting differences like underscores and spaces, and case_when() to fix typos like Garci and Smyth
+
+
+
+ISSUE 2 (Second Most Important)
+--------------------------------
+Brief description: Negative body mass values that are biologically impossible
+
+Which tutorial provides the solution: Tutorial 5 - Numeric & Cross-Variable Consistency
+
+Which variable(s) affected: body_mass_mg
+
+Why this is important to fix: Negative body mass is impossible and would distort summary statistics and any models using body mass as a predictor
+
+What I plan to do: Filter for negative values and convert them to NA using if_else() or case_when()
+
+
+
+OTHER ISSUES I NOTICED (but won't fix in Week 2)
+-------------------------------------------------
+- Collection date of 2024-01-15 outside study period - will flag or convert to NA
+- Missing values in eggs_laid, eggs_hatched, body_mass_mg, and collector - need to check patterns before deciding how to handle
+- Possible duplicate female_ids if repeated measures - need to check with metadata
+
+
+QUESTIONS TO DISCUSS IN WEEK 2
+-------------------------------
+Things I'm still unsure about:
+
+1. Should I convert the out-of-range date to NA or try to estimate the correct date?
+
+2. Is eggs_laid of 0 a real observation or should it be NA?
+
+3. Are the missing values across variables related to each other or random?
