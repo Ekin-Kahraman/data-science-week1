@@ -1,0 +1,5 @@
+1. Are the different spellings of site names (Site_A, Site A, site_a) meant to be the same site?
+2. Should treatment names like Control, control, and HIGH_DOSE be treated as the same group?
+3. Are Garci and Smyth typos for Garcia and Smith?
+4. Is the negative body mass a data entry error or another type of error
+5. Is the collection date of 2024-01-15 a mistake since: (Study Period: May 1, 2023 - August 31, 2023)
